@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const tabs = [
@@ -23,7 +23,6 @@ export default function Navbar() {
   const [style, setStyle] = useState({ left: 0, width: 0 });
   const ref = useRef<Record<string, HTMLElement | null>>({});
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     const element = ref.current[pathname];
@@ -47,11 +46,7 @@ export default function Navbar() {
       {tabs.map(({ href, name }) => (
         <Link
           className="my-auto select-none rounded-full px-4 text-center text-white transition-colors duration-200 text-xs font-medium"
-          href={`${href}${
-            searchParams.get("variant")
-              ? `?variant=${searchParams.get("variant")}`
-              : ""
-          }`}
+          href={href}
           key={href}
           prefetch={false}
           ref={(element) => {
