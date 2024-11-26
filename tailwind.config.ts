@@ -12,6 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        "data-mono": "var(--data-mono)",
+        "reforma-sans": "var(--reforma-sans)",
+        "xhdd-compressed": "var(--xhdd-compressed)",
+      },
     },
   },
   plugins: [],
