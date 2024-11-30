@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${dataMono.variable} ${reformaSans.variable} ${xhddCompressed.variable} antialiased`}
+        className={`${inter.className} ${dataMono.variable} ${reformaSans.variable} ${xhddCompressed.variable} antialiased selection:bg-black`}
       >
         <Background />
         <Header />
